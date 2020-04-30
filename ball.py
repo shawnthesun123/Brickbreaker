@@ -1,6 +1,5 @@
 import pygame
 import random
-from gameover import gameover_screen
 from paddle import Paddle
 
 
@@ -29,7 +28,7 @@ class Ball(pygame.sprite.Sprite):
 
     def wall_bounce(self):
         self.direction = -self.direction
-        self.speed *= 1.001
+        self.speed *= 1.01
 
     def right_bounce(self):
         self.speed = -self.speed
@@ -39,7 +38,7 @@ class Ball(pygame.sprite.Sprite):
         self.speed = -self.speed
 
 
-        self.speed *= 1.001
+        self.speed *= 1.01
 
     # def __init__(self, vector):
     #     pygame.sprite.Sprite.__init__(self)
@@ -62,8 +61,7 @@ class Ball(pygame.sprite.Sprite):
         if self.rect.y > self.screenheight:
             if self.count > 0:
                 self.reset(x, y)
-            if self.count == 0:
-                gameover_screen()
+
 
         if self.rect.y < 0:
             self.direction = -self.direction

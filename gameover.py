@@ -26,14 +26,12 @@ def gameover_screen():
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_c]:
-            quit()
+            run = False
         # if keys[pygame.K_r]:
-        #
-        screen_gameover.fill(black)
-        text_to_screen(screen_gameover, "Game Over", screen_width/2 - 50, screen_height/2-100)
+        #     game_init()
 
+        screen_gameover.fill(black)
+        text_to_screen(screen_gameover, "Game Over", screen_width/2 - 100, screen_height/2-100)
+        text_to_screen(screen_gameover, "Press c to restart", screen_width / 2 - 150, screen_height / 2)
         pygame.display.update()
         clock.tick(60)
-
-
-# gameover_screen()

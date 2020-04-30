@@ -27,7 +27,8 @@ def start_screen():
         if keys[pygame.K_c]:
             run = False
         screen_start.fill(black)
-        text_to_screen(screen_start, "Welcome to Brick Breaker", screen_width/2-200, screen_height/2-100)
+        text_to_screen(screen_start, "Welcome to Brick Breaker", screen_width/2-200, screen_height/2-200)
+        text_to_screen(screen_start, "Press c to start", screen_width / 2 - 150, screen_height / 2 - 50)
         pygame.display.update()
         clock.tick(60)
 
