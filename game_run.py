@@ -95,6 +95,10 @@ def game_init():
             run = False
             gameover_screen()
 
+        if not bricks_list:
+            run = False
+            gameover_screen()
+
 
         all_sprites_list.update(paddle.rect.x + paddle.paddle_width / 2, paddle.rect.y - (paddle.paddle_height + 10))
         all_sprites_list.draw(screen)

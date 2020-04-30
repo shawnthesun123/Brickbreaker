@@ -10,3 +10,4 @@ class Brick(pygame.sprite.Sprite):
         self.image = pygame.transform.scale(pygame.image.load("brick.jpg"), (self.brick_width, self.brick_height))
         self.rect = self.image.get_rect()
 
+
